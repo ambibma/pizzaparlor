@@ -23,6 +23,13 @@ Step 1:
     -check for toppings and assign value
     -check size and assign value
     -create cost toppings + size
+Step 2:
+-input for pizza size
+-check box input for pizza toppings
+-cost window
+-add to order button? *
+-checkout button
+  -"You order will be ready for pick up in..."
 
 TDD
 
