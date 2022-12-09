@@ -34,5 +34,9 @@ expected output: Pizza {toppings:["Pepporoni", "olives"] size:XL}
 describe: Pizza.prototype.costOf()
 test: It should add a cost to the pizza object of its topping
 code: pizza.costOf()
-expected output: pizza {toppings:["pepporni"] size: "XL" cost: 3.00}
+expected output: 3
+
+test: it should add another value to the pizza's cost key-property for two toppings
+code: pizza.costOf()
+expected output: 5
 
