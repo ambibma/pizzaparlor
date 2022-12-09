@@ -1,7 +1,3 @@
-Pizza {}
-toppings:
-size:
-cost:
 
 Parlor {
   Orders: [{Pizza 1: toppings:[pep, olives], size: XL, Cost: 12.00 }]
