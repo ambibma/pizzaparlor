@@ -34,20 +34,23 @@ Pizza.prototype.costOfPizza = function (){
 function handleSubmit(event){
 event.preventDefault();
 const sizeSelection = document.getElementById("pizzaSize").value;
-const toppingsSelection = document.querySelectorAll('input[type="checkbox"]:checked[name="toppingsOption"]')
+const toppingsSelection = document.querySelectorAll('input[type="checkbox"]:checked[name="toppingsOption"]');
 const toppingsSelectionsArray = Array.from(toppingsSelection);
-const pizzaToppings = []
+const pizzaToppings = [];
 toppingsSelectionsArray.forEach(function(element){
   return pizzaToppings.push(element.value)
 });
-let pizza = new Pizza(pizzaToppings, sizeSelection);
-const printCost = document.getElementById("orderTotal");
-pizza.costOfPizza();
 const displayCost = document.getElementById("displayOrder");
+const printCost = document.getElementById("orderTotal");
+if(printCost.innertext != NaN){
+  let pizza1
+}
+let pizza = new Pizza(pizzaToppings, sizeSelection);
+pizza.costOfPizza();
 displayCost.classList.remove("hidden");
 printCost.innerText = pizza.cost
-
 }
+
 
 window.addEventListener("load", function (){
 this.document.querySelector("form#pizzaOrderForm").addEventListener("submit", handleSubmit);
