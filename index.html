@@ -7,15 +7,20 @@
   </head>
 <body>
 <div class="container">
+  <div class="item1">
+    <h1>Pizza Parlor</h1>
+  </div>
   <div class="item">
     <div id="pizzaOrder">
-      <form id="pizzaOrderForm">
+      <h3>Fill out the form below to place an order<h3>
+        <form id="pizzaOrderForm">
+        <label for="pizzaSize">Pizza Size</label><br>
         <select id="pizzaSize">
           <option value="medium">Medium</option>
           <option value="large">Large</option>
           <option value="xl">Extra Large</option>
-        </select>
-        Toppings
+        </select><br>
+        Toppings<br>
         <label>
           <input type="checkbox" name="pepporoniOption" value="pepporoni">
           Pepporoni
@@ -23,11 +28,14 @@
         <label>
           <input type="checkbox" name="olivesOption" value="olives">
           Olives
-        </label>
-        <button type="submit">Add Pizza</button>     
-      </form>  
+        </label><br>
+        <button type="submit">Add Pizza</button>    
+      </form>
+
     </div>  
   </div>
+  <div class="item hidden"></div>
+  <p id="displayOrder"><span id="orderTotal"></span></p>
 </div>
 
 </body>

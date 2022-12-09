@@ -1,0 +1,25 @@
+.container {
+  display: flex;
+  align-items: center;
+  height: 33.3vh;
+  flex-direction: column;
+  
+}
+.item1{
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(94, 125, 84);
+  padding:20px;
+}
+.item{
+  text-align: center;
+  background-color: rgba(240, 128, 128, 0.664);
+  font-size: 18px;
+  margin: 20px;
+  padding: 10px;
+  line-height: 1.5;
+}
+
+.hidden{
+  display:none
+}
