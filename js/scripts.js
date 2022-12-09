@@ -23,3 +23,8 @@ Pizza.prototype.costOfSize = function () {
       this.cost += 15.00      
   } return this.cost
 }
+
+Pizza.prototype.costOfPizza = function (){
+  this.costOfToppings() + this.costOfSize()
+  return this.cost
+}
