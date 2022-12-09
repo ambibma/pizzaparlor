@@ -3,13 +3,11 @@ function Pizza (toppings, size) {
   this.size = size;
 }
 
-Pizza.prototype.costOf = function() {
+Pizza.prototype.costOfPizza = function() {
   this.cost = 0
-  if ((this.toppings[0] === "pepporoni") && (this.toppings.length <= 1)) {
-    this.cost += 3.00; 
-  } else if ((this.toppings[0] ==="pepporoni") && (this.toppings[1] === "olives") &&(this.toppings.length<=2)){ 
-    this.cost += 5.00
-  } else {
-    return this.cost
-  }
-}
+  for (i = 0; i <= this.toppings.length; i++)
+      if(this.toppings[i] === "pepporoni"){
+          this.cost += 3.00 
+      }else if (this.toppings[i] === "olives"){
+          this.cost += 2.00 
+      }}

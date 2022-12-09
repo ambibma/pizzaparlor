@@ -31,7 +31,7 @@ test: It should return a new Pizza object
 code: new Pizza(toppings, size)
 expected output: Pizza {toppings:["Pepporoni", "olives"] size:XL}
 
-describe: Pizza.prototype.costOf()
+describe: Pizza.prototype.costOfToppings()
 test: It should add a cost to the pizza object of its topping
 code: pizza.costOf()
 expected output: 3
@@ -39,4 +39,8 @@ expected output: 3
 test: it should add another value to the pizza's cost key-property for two toppings
 code: pizza.costOf()
 expected output: 5
+
+test: it should add another value to the pizza's cost key-property for two toppings and size"
+code: pizza.costOf();
+expected output : 15
 
