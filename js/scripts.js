@@ -3,7 +3,7 @@ function Pizza (toppings, size) {
   this.size = size;
 }
 
-Pizza.prototype.costOfPizza = function() {
+Pizza.prototype.costOfTopping = function() {
   this.cost = 0
   for (i = 0; i <= this.toppings.length; i++)
       if(this.toppings[i] === "pepporoni"){
