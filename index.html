@@ -16,10 +16,12 @@
         <form id="pizzaOrderForm">
         <label for="pizzaSize">Pizza Size</label><br>
         <select id="pizzaSize">
+          <option value="null">select size</option>
           <option value="medium">Medium</option>
           <option value="large">Large</option>
           <option value="xl">Extra Large</option>
         </select><br>
+        <p id="warningMessage" class="hidden">Please Select a size!</p>
         Toppings<br>
         <label>
           <input type="checkbox" name="toppingsOption" value="pepporoni">

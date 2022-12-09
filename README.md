@@ -31,6 +31,15 @@ Step 2:
 -checkout button
   -"You order will be ready for pick up in..."
 
+Stretch Goals:
+-refactor cost functions
+-Add enter page
+-add another pizza 
+-add cheezy bread pop-up
+-styling: background, theme
+-display pizza
+
+
 TDD
 
 Describe: function Pizza()

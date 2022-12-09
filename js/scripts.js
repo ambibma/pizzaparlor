@@ -34,21 +34,30 @@ Pizza.prototype.costOfPizza = function (){
 function handleSubmit(event){
 event.preventDefault();
 const sizeSelection = document.getElementById("pizzaSize").value;
-const toppingsSelection = document.querySelectorAll('input[type="checkbox"]:checked[name="toppingsOption"]');
-const toppingsSelectionsArray = Array.from(toppingsSelection);
-const pizzaToppings = [];
-toppingsSelectionsArray.forEach(function(element){
-  return pizzaToppings.push(element.value)
-});
-const displayCost = document.getElementById("displayOrder");
-const printCost = document.getElementById("orderTotal");
-if(printCost.innertext != NaN){
-  let pizza1
-}
-let pizza = new Pizza(pizzaToppings, sizeSelection);
-pizza.costOfPizza();
-displayCost.classList.remove("hidden");
-printCost.innerText = pizza.cost
+const warningMessage = document.getElementById("warningMessage");
+if (sizeSelection === "null"){
+  return warningMessage.classList.remove("hidden")
+  }const toppingsSelection = document.querySelectorAll('input[type="checkbox"]:checked[name="toppingsOption"]');
+  warningMessage.classList.add("hidden");
+  const toppingsSelectionsArray = Array.from(toppingsSelection);
+  const pizzaToppings = [];
+  toppingsSelectionsArray.forEach(function(element){
+    return pizzaToppings.push(element.value)
+      });
+  const displayCost = document.getElementById("displayOrder");
+  const printCost = document.getElementById("orderTotal");
+  let pizza = new Pizza(pizzaToppings, sizeSelection);
+  pizza.costOfPizza();
+  displayCost.classList.remove("hidden");
+  printCost.innerText = pizza.cost
+  }
+
+
+  
+
+function addPizza (event){
+  event.preventDefault();
+
 }
 
 
