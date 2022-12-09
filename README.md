@@ -40,7 +40,8 @@ test: it should add another value to the pizza's cost key-property for two toppi
 code: pizza.costOf()
 expected output: 5
 
-test: it should add another value to the pizza's cost key-property for two toppings and size"
-code: pizza.costOf();
+describe: Pizza.prototype.costOfSize();
+test: it should add another value to the pizza's cost key-property for each size: "medium, large, Xlarge"
+code: pizza.costOfSize();
 expected output : 15
 
