@@ -31,3 +31,21 @@ Pizza.prototype.costOfPizza = function (){
 }
 
 //UI Logic
+function handleSubmit(event){
+event.preventDefault();
+const sizeSelection = document.getElementById("pizzaSize").value;
+const toppingsSelection = document.querySelectorAll("input[name=toppingsOption]:checked");
+const toppingsSelectionsArray = Array.from(toppingsSelection);
+const pizzaToppings = toppingsSelectionsArray.forEach(function(element){
+  return element.value
+});
+let pizza = new Pizza(pizzaToppings, sizeSelection);
+const displayCost = document.getElementById("OrderTotal");
+pizza.costOfPizza();
+displayCost.innerText = pizza.cost
+
+}
+
+window.addEventListener("load", function (){
+this.document.querySelector("form#pizzaOrderForm").addEventListener("submit", handleSubmit);
+});
