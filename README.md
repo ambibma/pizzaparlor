@@ -30,3 +30,9 @@ Describe: function Pizza()
 test: It should return a new Pizza object
 code: new Pizza(toppings, size)
 expected output: Pizza {toppings:["Pepporoni", "olives"] size:XL}
+
+describe: Pizza.prototype.costOf()
+test: It should add a cost to the pizza object of its topping
+code: pizza.costOf()
+expected output: pizza {toppings:["pepporni"] size: "XL" cost: 3.00}
+
