@@ -41,7 +41,7 @@ code: pizza.costOf()
 expected output: 5
 
 describe: Pizza.prototype.costOfSize();
-test: it should add another value to the pizza's cost key-property for each size: "medium, large, Xlarge"
+test: it should add another value to the pizza's cost key-property for each size: "medium, large, xl"
 code: pizza.costOfSize();
-expected output : 15
+expected output : 20
 
