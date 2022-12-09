@@ -6,7 +6,7 @@ function Pizza (toppings, size) {
 }
 
 Pizza.prototype.costOfToppings = function() {
-    for (i = 0; i <= this.toppings.length; i++)
+    for (i = 0; i <= 2; i++)
       if(this.toppings[i] === "pepporoni"){
           this.cost += 3.00 
       }else if (this.toppings[i] === "olives"){
@@ -34,15 +34,18 @@ Pizza.prototype.costOfPizza = function (){
 function handleSubmit(event){
 event.preventDefault();
 const sizeSelection = document.getElementById("pizzaSize").value;
-const toppingsSelection = document.querySelectorAll("input[name=toppingsOption]:checked");
+const toppingsSelection = document.querySelectorAll('input[type="checkbox"]:checked[name="toppingsOption"]')
 const toppingsSelectionsArray = Array.from(toppingsSelection);
-const pizzaToppings = toppingsSelectionsArray.forEach(function(element){
-  return element.value
+const pizzaToppings = []
+toppingsSelectionsArray.forEach(function(element){
+  return pizzaToppings.push(element.value)
 });
 let pizza = new Pizza(pizzaToppings, sizeSelection);
-const displayCost = document.getElementById("OrderTotal");
+const printCost = document.getElementById("orderTotal");
 pizza.costOfPizza();
-displayCost.innerText = pizza.cost
+const displayCost = document.getElementById("displayOrder");
+displayCost.classList.remove("hidden");
+printCost.innerText = pizza.cost
 
 }
 
