@@ -1,3 +1,7 @@
+//Parlor Logic
+function Parlor() { 
+this.orders = []
+}
 //Pizza Logic
 function Pizza (toppings, size) {
   this.toppings = toppings;

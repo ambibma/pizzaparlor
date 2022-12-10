@@ -61,3 +61,8 @@ describe: Pizza.prototype.costOfPizza();
 test: it should return the total cost of a pizza adding costOfToppings and costOfSize to make one final const
 code: pizza.costOfPizza();
 expected output: 20
+
+describe: function Parlor()
+test: it should create a Parlor object with an empty array to hold orders 
+code let parlor = new Parlor()
+expected output = Parlor {orders:[]}
