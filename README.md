@@ -30,7 +30,7 @@ code: pizza.costOfSize();
 expected output : 20
 
 describe: Pizza.prototype.costOfPizza();
-test: it should return the total cost of a pizza adding costOfToppings and costOfSize to make one final const
+test: it should return the total cost of a pizza adding costOfToppings and costOfSize to make one final cost
 code: pizza.costOfPizza();
 expected output: 20
 
