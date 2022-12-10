@@ -58,10 +58,14 @@ function displayOrder(pizzasToDisplay){
   const div = document.getElementById("pizzas");
   const ul = document.createElement("ul");
   Object.keys(pizzasToDisplay.orders).forEach(function(key){
-  const order = orderToDisplay.findOrder(key);
+  const order = pizzasToDisplay.findOrder(key);
   const li = document.createElement("li");
-  li.append()
+  const p = document.createElement("p");
+  li.append(order.size + " Pizza");
+  li.setAttribute("id", order.id);
+  ul.append(li);
   });
+  div.append(ul);
 }
 function handleSubmit(event){
   event.preventDeafult();
