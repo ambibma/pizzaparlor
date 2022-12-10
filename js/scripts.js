@@ -1,8 +1,13 @@
 //Parlor Logic
+let parlor = new Parlor();
 function Parlor() { 
-this.orders = [];
+this.orders = {};
 this.currentId = 0;
 
+}
+Parlor.prototype.newOrder = function (order){
+  order.id = this.assignOrderId();
+  this.orders[order.id] = order;
 }
 Parlor.prototype.assignOrderId = function(){
   this.currentId += 1;
@@ -13,10 +18,11 @@ function Order() {
   this.id = 0
 }
 //Pizza Logic
-function Pizza (toppings, size) {
+function Pizza (toppings, size, name) {
   this.toppings = toppings;
   this.size = size;
   this.cost = 0;
+  this.name = name
 }
 
 Pizza.prototype.costOfToppings = function() {

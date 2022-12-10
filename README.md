@@ -63,15 +63,20 @@ code: pizza.costOfPizza();
 expected output: 20
 
 describe: function Parlor()
-test: it should create a Parlor object with an empty array to hold orders 
+test: it should create a Parlor object with an empty object to hold orders 
 code let parlor = new Parlor()
-expected output = Parlor {orders:[]}
+expected output = Parlor {orders:{}}
 
 test: it should have a currentId value so that it can assign a unique ID to an order
 code: Parlor.orders.currentId
-expected output : Parlor {orders:[] CurrentId: 0}
+expected output : Parlor {orders:{} CurrentId: 0}
 
 Describe: assignOrderId()
 test: it should add a counter to current.id that when called, current.id will count
 code: Parlor.prototype.assignOrderId()
-expected output: Parlor {oders:[] currentId: 1}
+expected output: Parlor {oders:{} currentId: 1}
+
+Describe: addOrder()
+test: it should add an order to the Parlor object with a unique Id
+code: Parlor.prototype.addOrder()
+expected output: Parlor{orders:[1] currentId: 1}
