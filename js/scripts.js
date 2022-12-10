@@ -98,39 +98,26 @@ function handleSubmit(event){
   pInterger += newPizza.cost;
   printCost.innerText = pInterger.toString();
   displayCost.classList.remove("hidden");
+  sizeSelection.value = null;
+  toppingsSelection.value = null;
+
 
 }
-
-
-
-// function handleSubmit(event){
-// event.preventDefault();
-// const sizeSelection = document.getElementById("pizzaSize").value;
-
-// }const toppingsSelection = document.querySelectorAll('input[type="checkbox"]:checked[name="toppingsOption"]');
-// warningMessage.classList.add("hidden");
-// const toppingsSelectionsArray = Array.from(toppingsSelection);
-// const pizzaToppings = [];
-// toppingsSelectionsArray.forEach(function(element){
-//   return pizzaToppings.push(element.value)
-//   });
-// const displayCost = document.getElementById("displayOrder");
-// const printCost = document.getElementById("orderTotal");
-// let pizza = new Pizza(pizzaToppings, sizeSelection);
-// pizza.costOfPizza();
-// displayCost.classList.remove("hidden");
-// printCost.innerText = pizza.cost
-//   }
-
-
-  
-
-function addPizza (event){
-  event.preventDefault();
+function handleCheckout() {
+  let pizzaForm = document.querySelector("div.item");
+  let checkoutMessage = document.querySelector("div.item3");
+  let checkoutButton = document.getElementById("checkoutButton");
+  pizzaForm.classList.add("hidden");
+  checkoutMessage.classList.remove("hidden");
+  checkoutButton.classList.add("hidden");
+  const nameInput = document.getElementById("nameInput").value;
+  let displayCustomerName = document.getElementById("customerName");
+  displayCustomerName.innerText = nameInput;
 
 }
 
 
 window.addEventListener("load", function (){
-this.document.querySelector("form#pizzaOrderForm").addEventListener("submit", handleSubmit);
+document.querySelector("form#pizzaOrderForm").addEventListener("submit", handleSubmit);
+document.querySelector("button#checkoutButton").addEventListener("click", handleCheckout);
 });
