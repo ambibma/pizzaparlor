@@ -25,6 +25,17 @@ body{
   padding: 10px;
   line-height: 1.5;
 }
+#pizzas{
+  text-align: center;
+  padding:20px;
+}
+.item3{
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(240, 128, 128, 0.664);
+  text-align: center;
+  padding: 20px;
+}
 
 .hidden{
   display:none

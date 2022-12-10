@@ -113,11 +113,16 @@ function handleCheckout() {
   const nameInput = document.getElementById("nameInput").value;
   let displayCustomerName = document.getElementById("customerName");
   displayCustomerName.innerText = nameInput;
-
+  let newOrderButton = document.getElementById("newPizzaButton");
+  newOrderButton.classList.remove("hidden");
 }
-
+function handleReset(){
+  location.reload();
+}
 
 window.addEventListener("load", function (){
 document.querySelector("form#pizzaOrderForm").addEventListener("submit", handleSubmit);
 document.querySelector("button#checkoutButton").addEventListener("click", handleCheckout);
+document.querySelector("button#newPizzaButton").addEventListener("click", handleReset);
+
 });
