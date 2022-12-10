@@ -2,10 +2,10 @@
 Stretch Goals:
 -refactor cost functions
 -Add enter page
--add another pizza 
+-add another pizza ✓
 -add cheezy bread pop-up
 -styling: background, theme
--display pizza
+-display pizza✓
 
 
 TDD
@@ -21,7 +21,7 @@ code: pizza.costOf()
 expected output: 3
 
 test: it should add another value to the pizza's cost key-property for two toppings
-code: pizza.costOf()
+code: pizza.costOfToppings()
 expected output: 5
 
 describe: Pizza.prototype.costOfSize();
