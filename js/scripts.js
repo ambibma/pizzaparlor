@@ -56,6 +56,7 @@ Pizza.prototype.costOfPizza = function (){
 //UI Logic
 function displayOrder(pizzasToDisplay){
   const div = document.getElementById("pizzas");
+  div.innerText = null
   const ul = document.createElement("ul");
   Object.keys(pizzasToDisplay.orders).forEach(function(key){
   const order = pizzasToDisplay.findOrder(key);
@@ -68,12 +69,13 @@ function displayOrder(pizzasToDisplay){
   div.append(ul);
 }
 function handleSubmit(event){
-  event.preventDeafult();
+  event.preventDefault();
   const sizeSelection = document.getElementById("pizzaSize").value;
   const toppingsSelection = document.querySelectorAll('input[type="checkbox"]:checked[name="toppingsOption"]');
   const displayCost = document.getElementById("displayOrder");
   const printCost = document.getElementById("orderTotal");
-  const nameInput = document.getElementById("nameInput").value;
+  let pInterger = parseInt(printCost.innerText);
+  // const nameInput = document.getElementById("nameInput").value;
   const toppingsSelectionsArray = Array.from(toppingsSelection);
   const pizzaToppings = [];
   toppingsSelectionsArray.forEach(function(element){
@@ -81,30 +83,35 @@ function handleSubmit(event){
     });
   let newPizza = new Pizza(pizzaToppings, sizeSelection);
   parlor.newOrder(newPizza)
+  displayOrder(parlor);
+  newPizza.costOfPizza();
+  pInterger += newPizza.cost;
+  printCost.innerText = pInterger.toString();
+  displayCost.classList.remove("hidden");
 }
 
 
 
-function handleSubmit(event){
-event.preventDefault();
-const sizeSelection = document.getElementById("pizzaSize").value;
-const warningMessage = document.getElementById("warningMessage");
-if (sizeSelection === "null"){
-  return warningMessage.classList.remove("hidden")
-}const toppingsSelection = document.querySelectorAll('input[type="checkbox"]:checked[name="toppingsOption"]');
-warningMessage.classList.add("hidden");
-const toppingsSelectionsArray = Array.from(toppingsSelection);
-const pizzaToppings = [];
-toppingsSelectionsArray.forEach(function(element){
-  return pizzaToppings.push(element.value)
-  });
-const displayCost = document.getElementById("displayOrder");
-const printCost = document.getElementById("orderTotal");
-let pizza = new Pizza(pizzaToppings, sizeSelection);
-pizza.costOfPizza();
-displayCost.classList.remove("hidden");
-printCost.innerText = pizza.cost
-  }
+// function handleSubmit(event){
+// event.preventDefault();
+// const sizeSelection = document.getElementById("pizzaSize").value;
+// const warningMessage = document.getElementById("warningMessage");
+// if (sizeSelection === "null"){
+//   return warningMessage.classList.remove("hidden")
+// }const toppingsSelection = document.querySelectorAll('input[type="checkbox"]:checked[name="toppingsOption"]');
+// warningMessage.classList.add("hidden");
+// const toppingsSelectionsArray = Array.from(toppingsSelection);
+// const pizzaToppings = [];
+// toppingsSelectionsArray.forEach(function(element){
+//   return pizzaToppings.push(element.value)
+//   });
+// const displayCost = document.getElementById("displayOrder");
+// const printCost = document.getElementById("orderTotal");
+// let pizza = new Pizza(pizzaToppings, sizeSelection);
+// pizza.costOfPizza();
+// displayCost.classList.remove("hidden");
+// printCost.innerText = pizza.cost
+//   }
 
 
   
