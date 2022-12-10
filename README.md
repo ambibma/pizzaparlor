@@ -66,3 +66,7 @@ describe: function Parlor()
 test: it should create a Parlor object with an empty array to hold orders 
 code let parlor = new Parlor()
 expected output = Parlor {orders:[]}
+
+test: it should have a currentId value so that it can assign a unique ID to an order
+code: Parlor.orders.currentId
+expected output : Parlor {orders:[] CurrentId: 0}

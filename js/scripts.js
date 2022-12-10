@@ -1,6 +1,12 @@
 //Parlor Logic
 function Parlor() { 
-this.orders = []
+this.orders = [];
+this.currentId = 0;
+
+}
+//Order Logic
+function Order() {
+  this.id = 0
 }
 //Pizza Logic
 function Pizza (toppings, size) {
