@@ -71,11 +71,21 @@ function displayOrder(pizzasToDisplay){
 function handleSubmit(event){
   event.preventDefault();
   const sizeSelection = document.getElementById("pizzaSize").value;
+  const warningMessageSize = document.getElementById("warningMessageSize");
+  const warningMessageName = document.getElementById("warningMessageName");
+  if (sizeSelection === "null"){
+  return warningMessageSize.classList.remove("hidden")
+  }
+  warningMessageSize.classList.add("hidden");
   const toppingsSelection = document.querySelectorAll('input[type="checkbox"]:checked[name="toppingsOption"]');
   const displayCost = document.getElementById("displayOrder");
   const printCost = document.getElementById("orderTotal");
   let pInterger = parseInt(printCost.innerText);
-  // const nameInput = document.getElementById("nameInput").value;
+  const nameInput = document.getElementById("nameInput").value;
+  if (nameInput === ""){
+    return warningMessageName.classList.remove("hidden")
+    }
+  warningMessageName.classList.add("hidden")
   const toppingsSelectionsArray = Array.from(toppingsSelection);
   const pizzaToppings = [];
   toppingsSelectionsArray.forEach(function(element){
@@ -88,6 +98,7 @@ function handleSubmit(event){
   pInterger += newPizza.cost;
   printCost.innerText = pInterger.toString();
   displayCost.classList.remove("hidden");
+
 }
 
 
@@ -95,9 +106,7 @@ function handleSubmit(event){
 // function handleSubmit(event){
 // event.preventDefault();
 // const sizeSelection = document.getElementById("pizzaSize").value;
-// const warningMessage = document.getElementById("warningMessage");
-// if (sizeSelection === "null"){
-//   return warningMessage.classList.remove("hidden")
+
 // }const toppingsSelection = document.querySelectorAll('input[type="checkbox"]:checked[name="toppingsOption"]');
 // warningMessage.classList.add("hidden");
 // const toppingsSelectionsArray = Array.from(toppingsSelection);
