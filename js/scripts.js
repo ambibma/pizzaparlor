@@ -57,16 +57,16 @@ Pizza.prototype.costOfPizza = function (){
 function displayOrder(pizzasToDisplay){
   const div = document.getElementById("pizzas");
   div.innerText = null
-  const ul = document.createElement("ul");
+  const ol = document.createElement("ol");
   Object.keys(pizzasToDisplay.orders).forEach(function(key){
   const order = pizzasToDisplay.findOrder(key);
   const li = document.createElement("li");
-  const p = document.createElement("p");
+  // const p = document.createElement("p");
   li.append(order.size + " Pizza");
   li.setAttribute("id", order.id);
-  ul.append(li);
+  ol.append(li);
   });
-  div.append(ul);
+  div.append(ol);
 }
 function handleSubmit(event){
   event.preventDefault();
