@@ -31,12 +31,16 @@
           <input type="checkbox" name="toppingsOption" value="olives">
           Olives
         </label><br>
+        <label for="nameInput">Enter a name for the order</label>
+        <input type="text" id="nameInput">
         <button type="submit">Add Pizza</button>    
       </form>
 
     </div>  
   </div>
   <div id="displayOrder" class="item hidden">
+    <div id="pizzas">
+    </div>
     <p>Total: $<span id="orderTotal"></span>.00</p>
   </div>
 </div>

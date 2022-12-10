@@ -80,3 +80,8 @@ Describe: addOrder()
 test: it should add an order to the Parlor object with a unique Id
 code: Parlor.prototype.addOrder()
 expected output: Parlor{orders:[1] currentId: 1}
+
+Describe: findOrder() 
+test: it should find and retrieve an order based on its id number
+code: Parlor.prototype.findOrder(1)
+expected output: 1: Pizza {Pizza(["pepporoni", "olives"], "medium", "john") id:1}
