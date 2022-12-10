@@ -4,6 +4,10 @@ this.orders = [];
 this.currentId = 0;
 
 }
+Parlor.prototype.assignOrderId = function(){
+  this.currentId += 1;
+  return this.currentId;
+}
 //Order Logic
 function Order() {
   this.id = 0

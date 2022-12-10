@@ -70,3 +70,8 @@ expected output = Parlor {orders:[]}
 test: it should have a currentId value so that it can assign a unique ID to an order
 code: Parlor.orders.currentId
 expected output : Parlor {orders:[] CurrentId: 0}
+
+Describe: assignOrderId()
+test: it should add a counter to current.id that when called, current.id will count
+code: Parlor.prototype.assignOrderId()
+expected output: Parlor {oders:[] currentId: 1}
