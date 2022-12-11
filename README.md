@@ -3,8 +3,6 @@
 ---
 #### By Ambi Hidalgo 
 ###### ambio.pk@gmail.com
-#
-#
 ---
 
 #### Pizza Parlor
