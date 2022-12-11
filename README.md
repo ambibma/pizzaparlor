@@ -1,11 +1,44 @@
 
-Stretch Goals:
--refactor cost functions
--Add enter page
--add another pizza ✓
--add cheezy bread pop-up
--styling: background, theme
--display pizza✓
+# Pizza Parlor
+---
+#### By Ambi Hidalgo 
+###### ambio.pk@gmail.com
+#
+#
+---
+
+#### Pizza Parlor
+Pizza parlor is a student project that was created to demonstrate learned practices of object-oriented JavaScript. Utilizing knowledge of  objects, constructors and prototypes users will be able to create a pizza order with multiple pizzas! 
+
+## Technologies Used
+
+* Javascript
+* CSS
+* HTML
+* Google Developer's Tools
+
+
+## Setup/Installation Requirements
+
+* Clone this repository (https://github.com/ambibma/pizzaparlor)
+* using terminal or gitbash navigate to pizzaparlor repository file
+* Once in the repo file 
+    *       $ Start index.html
+        or if on mac
+    *       $ open index.html
+* Place an order!
+
+## Known Bugs
+
+* No known bugs at the moment
+send bug concerns to ambi.pk@gmail.com
+
+## License
+
+
+Copyright (c) Ambi Hidalgo 2022
+
+## Tests for Business Logic
 
 
 TDD

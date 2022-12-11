@@ -34,9 +34,7 @@ Pizza.prototype.costOfToppings = function() {
           this.cost += 3.00 
       }else if (this.toppings[i] === "olives"){
           this.cost += 2.00 
-      } return this.cost
-  
-    
+      } return this.cost    
   }
 Pizza.prototype.costOfSize = function () {
   if(this.size === "medium"){
@@ -58,11 +56,13 @@ function displayOrder(pizzasToDisplay){
   const div = document.getElementById("pizzas");
   div.innerText = null
   const ol = document.createElement("ol");
+  const ul = document.createElement("ul");
   Object.keys(pizzasToDisplay.orders).forEach(function(key){
   const order = pizzasToDisplay.findOrder(key);
   const li = document.createElement("li");
+  const li2 = document.createElement("li");
   // const p = document.createElement("p");
-  li.append(order.size + " Pizza");
+  li.append(order.size + " Pizza");    
   li.setAttribute("id", order.id);
   ol.append(li);
   });
@@ -107,13 +107,13 @@ function handleCheckout() {
   let pizzaForm = document.querySelector("div.item");
   let checkoutMessage = document.querySelector("div.item3");
   let checkoutButton = document.getElementById("checkoutButton");
+  const nameInput = document.getElementById("nameInput").value;
+  let displayCustomerName = document.getElementById("customerName");
+  let newOrderButton = document.getElementById("newPizzaButton");
   pizzaForm.classList.add("hidden");
   checkoutMessage.classList.remove("hidden");
   checkoutButton.classList.add("hidden");
-  const nameInput = document.getElementById("nameInput").value;
-  let displayCustomerName = document.getElementById("customerName");
   displayCustomerName.innerText = nameInput;
-  let newOrderButton = document.getElementById("newPizzaButton");
   newOrderButton.classList.remove("hidden");
 }
 function handleReset(){
